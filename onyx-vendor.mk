@@ -2131,8 +2131,6 @@ PRODUCT_PACKAGES += \
     gralloc.default \
     libEseUtils \
     libaudiocorehal.default \
-    libaudiocorehal.qti \
-    libaudioeffecthal.qti \
     libqtigatekeeper \
     mapper.qti \
     mbedtls_qti \
@@ -2188,7 +2186,6 @@ PRODUCT_PACKAGES += \
     libMiVDR \
     libOpenCL \
     libOpenCL_adreno \
-    libPeripheralStateUtils \
     libPlatformValidatorShared \
     libQSEEComAPI \
     libQcelp13SwCodec \
@@ -2243,22 +2240,13 @@ PRODUCT_PACKAGES += \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
-    libagm \
-    libagmclient \
-    libagmipcservice \
     libagmmixer \
     libaidenoiser \
     libaidenoiserv2 \
-    libar-acdb \
-    libar-gpr \
-    libar-gsl \
-    libar-pal \
     libarmemlog \
-    libats \
     libaudio_aidl_conversion_common_ndk_prebuilt \
     libaudio_log_utils \
     libaudiocloudctrl \
-    libaudioplatformconverter.qti \
     libaudioserviceexampleimpl \
     libav_miwnsencoder \
     libbacklight-calib \
@@ -2452,8 +2440,6 @@ PRODUCT_PACKAGES += \
     liblowi_common \
     liblowi_wifihal \
     liblqe \
-    liblx-ar_util \
-    liblx-osal \
     libmapdata_api \
     libmapperutils \
     libmcs \
@@ -2544,7 +2530,6 @@ PRODUCT_PACKAGES += \
     libops \
     libos \
     libpal_net_if \
-    libpalclient \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
@@ -2820,15 +2805,11 @@ PRODUCT_PACKAGES += \
     libdynamicsprocessingaidl \
     libhwdapaidl \
     libloudnessenhanceraidl \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
     libquasar \
     libreverbaidl \
     libswgamedapaidl \
     libswspatializeraidl \
     libvisualizeraidl \
-    libvolumelistener \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
     vendor.display.color@1.2 \
