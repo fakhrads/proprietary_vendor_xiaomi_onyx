@@ -30023,30 +30023,11 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.fm-V1-ndk",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.fm-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// vendor.qti.hardware.fm-V1-ndk juga tidak dideklarasikan di sini, alasannya sama dengan
+// vendor.qti.hardware.fm@1.0 di atas: AOSPA mendeklarasikan aidl_interface "vendor.qti.hardware.fm" di
+// vendor/aospa/interfaces/qcom/fm/aidl, dan Soong men-generate modul "-V1-ndk" dari situ, jadi prebuilt
+// vendor di sini bikin gagal dengan "partition is different: system(...) != vendor(...)". aidl_interface
+// itu vendor_available: true, jadi modul yang memakainya tetap dapat varian vendor.
 
 // vendor.qti.hardware.fm@1.0 sengaja tidak dideklarasikan di sini. AOSPA sudah membangun interface
 // yang sama dari sumber di vendor/aospa/interfaces/qcom/fm/1.0 dengan system_ext_specific: true, dan
