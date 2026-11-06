@@ -30048,33 +30048,11 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.fm@1.0",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// vendor.qti.hardware.fm@1.0 sengaja tidak dideklarasikan di sini. AOSPA sudah membangun interface
+// yang sama dari sumber di vendor/aospa/interfaces/qcom/fm/1.0 dengan system_ext_specific: true, dan
+// prebuilt vendor di sini bikin Soong gagal: "partition is different: system_ext(...) != vendor(...)".
+// Modul yang memakainya (libbt-hidlclient, android.hardware.bluetooth@aidl-service-qti) tetap resolve
+// ke interface AOSPA tadi.
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.hexlp-V1-ndk",
